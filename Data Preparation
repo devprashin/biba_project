@@ -7,3 +7,5 @@ library("arules")
 matrixData <- as(splitData, Class =  "transactions")            # coerce to transaction object
 rules <- apriori(matrixData, parameter=list(support=0.1))   # etc
 inspect(rules[1])
+summary(matrixData)
+itemFrequencyPlot(matrixData)
